@@ -1,0 +1,50 @@
+name: Update Google Reviews
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # tous les jours à 6h UTC (~8h heure de Paris)
+  workflow_dispatch:       # bouton "Run workflow" manuel dans l'onglet Actions
+
+permissions:
+  contents: write
+
+jobs:
+  update-reviews:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Appeler l'API Google Places
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          GOOGLE_PLACE_ID: ${{ secrets.GOOGLE_PLACE_ID }}
+        run: |
+          curl -s "https://places.googleapis.com/v1/places/${GOOGLE_PLACE_ID}?languageCode=fr" \
+            -H "X-Goog-Api-Key: ${GOOGLE_PLACES_API_KEY}" \
+            -H "X-Goog-FieldMask: rating,userRatingCount,reviews" \
+            -o reviews-raw.json
+
+          echo "--- Réponse brute de Google (pour vérification) ---"
+          cat reviews-raw.json
+
+          jq '{
+            rating: .rating,
+            total: .userRatingCount,
+            updated_at: (now | strftime("%Y-%m-%d")),
+            reviews: [ .reviews[]? | {
+              author: .authorAttribution.displayName,
+              text: .text.text,
+              rating: .rating
+            } ]
+          }' reviews-raw.json > reviews.json
+
+          echo "--- reviews.json généré ---"
+          cat reviews.json
+
+      - name: Commit reviews.json si changé
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reviews.json
+          git diff --quiet --cached || git commit -m "Mise à jour automatique des avis Google"
+          git push
