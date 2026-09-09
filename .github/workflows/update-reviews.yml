@@ -33,6 +33,7 @@ jobs:
             updated_at: (now | strftime("%Y-%m-%d")),
             reviews: [ .reviews[]? | {
               author: .authorAttribution.displayName,
+              photo: .authorAttribution.photoUri,
               text: .text.text,
               rating: .rating
             } ]
