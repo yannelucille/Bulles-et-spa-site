@@ -1,6 +1,32 @@
 {
-  "rating": null,
-  "total": null,
-  "updated_at": null,
-  "reviews": []
+  "rating": 4.9,
+  "total": 27,
+  "updated_at": "2026-09-09",
+  "reviews": [
+    {
+      "author": "Karlyn Paulet",
+      "text": "Excellent séjour dans ce loft en plein cœur de Blagnac !\nLe logement est magnifique, parfaitement équipé et pensé pour se détendre. Le jacuzzi et le sauna sont un vrai plus pour déconnecter et profiter d'un moment de calme.\n\nLes hôtes sont très réactifs, disponibles et aux petits soins. Tout est fait pour que l'on se sente bien dès l'arrivée.\n\nL'emplacement est idéal, avec commerces, restaurants et services accessibles à pied, tout en conservant une atmosphère paisible.\n\nUne belle adresse pour une parenthèse de détente. Nous reviendrons avec plaisir !",
+      "rating": 5
+    },
+    {
+      "author": "Emma Charpentier",
+      "text": "Un superbe appartemment, facile d'accès avec un Jaccuzzi deja chaud à notre arrivée.\nEn revanche le sauna a été impossible à allumer et malheureusement le proprietaire ne nous a pas fourni d'aide du coup nous n'avons pas pu profiter du sauna qui etait l'une des raisons de mon choix de reservation. Tres dommage",
+      "rating": 3
+    },
+    {
+      "author": "Edwige Maunlley",
+      "text": "L’appartement Bulles&Spa est tout simplement magnifique !!! Il est spacieux, lumineux, décoré avec goût et au calme! J’étais en déplacement professionnel et après une longue journée de travail, j’étais tellement impatiente de rentrer ! Vous avez tout à proximité : restaurants, boulangerie, supermarché, le tram à 10mn à pied !\nC’est franchement le meilleur que j’ai loué depuis 2 ans que je viens en séminaire à Toulouse ! Merci Thierry pour tout!\nPS: le jacuzzi et le sauna sont la cerise sur le gâteau !😍😍😍",
+      "rating": 5
+    },
+    {
+      "author": "Clémence Leménicier",
+      "text": "J'ai passé un séjour exceptionnel du début à la fin dans ce loft luxueux et pensé pour le bien-être.  Un vrai cocon romantique, parfait pour se ressourcer solo ou à deux.\nLe niveau de confort est parfait avec un équipement haut de gamme. Le tout dans une déco soignée.\nMention spéciale pour le spa le soir, avec une ambiance tamisée et relaxante!\nMerci pour l'accueil professionnel et discret.\nÀ refaire sans hésiter !",
+      "rating": 5
+    },
+    {
+      "author": "Elodie Gougeon",
+      "text": "Nous avons passé un excellent week-end dans ce logement. L'endroit est propre et chaleureux. Le spa et le sauna sont de véritables atouts pour se relaxer. Nous recommandons sans hésitation à tous ceux qui cherchent une parenthèse bien être, et nous reviendrons avec grand plaisir.",
+      "rating": 5
+    }
+  ]
 }
