@@ -418,6 +418,20 @@
   </div>
 </section>
 
+<!-- ===================== INSTAGRAM ===================== -->
+<section id="instagram" class="py-24 md:py-32 bg-plaster">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10">
+    <div class="flex items-center justify-between mb-14 flex-wrap gap-4">
+      <div>
+        <p class="text-plum/55 text-sm tracking-wide mb-4">Instagram</p>
+        <h2 class="font-display text-3xl md:text-4xl leading-tight">Suivez-nous : @bullesetspa31</h2>
+      </div>
+      <a href="https://www.instagram.com/bullesetspa31/" target="_blank" rel="noopener" class="text-plum text-sm border-b border-plum/40 hover:border-plum transition-colors whitespace-nowrap">Voir le profil →</a>
+    </div>
+    <div id="instagram-grid" class="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4"></div>
+  </div>
+</section>
+
 <footer id="contact" class="py-20 md:py-28 bg-ink text-cream/90">
   <div class="max-w-6xl mx-auto px-6 lg:px-10">
     <div class="grid md:grid-cols-2 gap-16 mb-16">
@@ -508,6 +522,26 @@
       }
     })
     .catch(() => { /* pas grave, on garde les avis statiques déjà dans le HTML */ });
+
+  // Charge le flux Instagram généré automatiquement chaque jour (voir .github/workflows/update-instagram.yml)
+  fetch('./feed.json', { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : null)
+    .then(data => {
+      if (!data || !data.posts || data.posts.length === 0) return;
+
+      const grid = document.getElementById('instagram-grid');
+      grid.innerHTML = data.posts.map(p => {
+        const caption = (p.caption || '').slice(0, 100).trim();
+        return `
+        <a href="${p.link}" target="_blank" rel="noopener" class="group relative block aspect-square overflow-hidden rounded-sm bg-ink/5">
+          <img src="${p.image}" alt="Post Instagram Bulles & Spa" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute inset-0 bg-plum/0 group-hover:bg-plum/50 transition-colors duration-300 flex items-end p-3 opacity-0 group-hover:opacity-100">
+            <p class="text-cream text-xs leading-snug line-clamp-3">${caption}</p>
+          </div>
+        </a>`;
+      }).join('');
+    })
+    .catch(() => { /* pas grave, la section reste juste vide en attendant le premier passage du robot */ });
 
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
