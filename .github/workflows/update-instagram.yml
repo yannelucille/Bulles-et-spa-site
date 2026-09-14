@@ -1,0 +1,48 @@
+name: Update Instagram Feed
+
+on:
+  schedule:
+    - cron: '30 6 * * *'   # tous les jours à 6h30 UTC (juste après les avis Google)
+  workflow_dispatch:        # bouton "Run workflow" manuel dans l'onglet Actions
+
+permissions:
+  contents: write
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Récupérer les derniers posts Instagram
+        env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+        run: |
+          curl -s "https://graph.facebook.com/v26.0/${INSTAGRAM_USER_ID}/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp&limit=9&access_token=${INSTAGRAM_TOKEN}" \
+            -o feed-raw.json
+
+          echo "--- Réponse brute de Meta (pour vérification) ---"
+          cat feed-raw.json
+
+          jq '{
+            updated_at: (now | strftime("%Y-%m-%d")),
+            posts: [ .data[]? | select(.media_type == "IMAGE" or .media_type == "VIDEO" or .media_type == "CAROUSEL_ALBUM") | {
+              id: .id,
+              caption: (.caption // ""),
+              type: .media_type,
+              image: (if .media_type == "VIDEO" then .thumbnail_url else .media_url end),
+              link: .permalink
+            } ]
+          }' feed-raw.json > feed.json
+
+          echo "--- feed.json généré ---"
+          cat feed.json
+
+      - name: Commit feed.json si changé
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add feed.json
+          git diff --quiet --cached || git commit -m "Mise à jour automatique du flux Instagram"
+          git push
