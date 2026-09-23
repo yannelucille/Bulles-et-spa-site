@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulles & Spa — Private loft with spa in Blagnac, near Toulouse</title>
+<meta name="description" content="Private loft with jacuzzi, infrared sauna and massage room just outside Toulouse. A wellness retreat for two, in Blagnac.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.bullesetspa.fr/en/">
+
+<!-- Language alternates -->
+<link rel="alternate" hreflang="fr" href="https://www.bullesetspa.fr/">
+<link rel="alternate" hreflang="en" href="https://www.bullesetspa.fr/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.bullesetspa.fr/">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bulles & Spa">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:title" content="Bulles & Spa — Private loft with spa in Blagnac, near Toulouse">
+<meta property="og:description" content="Private loft with jacuzzi, infrared sauna and massage room just outside Toulouse. A wellness retreat for two, in Blagnac.">
+<meta property="og:url" content="https://www.bullesetspa.fr/en/">
+<meta property="og:image" content="https://www.bullesetspa.fr/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bulles & Spa — Private loft with spa in Blagnac, near Toulouse">
+<meta name="twitter:description" content="Private loft with jacuzzi, infrared sauna and massage room just outside Toulouse. A wellness retreat for two, in Blagnac.">
+<meta name="twitter:image" content="https://www.bullesetspa.fr/images/og-image.jpg">
+
+<!-- Structured data (Schema.org) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Bulles & Spa",
+  "description": "Private loft with jacuzzi, infrared sauna and massage room just outside Toulouse. A wellness retreat for two, in Blagnac.",
+  "url": "https://www.bullesetspa.fr/en/",
+  "image": [
+    "https://www.bullesetspa.fr/images/hero-salon-spa.jpg",
+    "https://www.bullesetspa.fr/images/jacuzzi.jpg",
+    "https://www.bullesetspa.fr/images/sauna.jpg"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "15 Place Intérieure de l'Église",
+    "addressLocality": "Blagnac",
+    "postalCode": "31700",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.6338398,
+    "longitude": 1.3990581
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Private jacuzzi" },
+    { "@type": "LocationFeatureSpecification", "name": "Infrared sauna" },
+    { "@type": "LocationFeatureSpecification", "name": "Private massage room" },
+    { "@type": "LocationFeatureSpecification", "name": "Equipped kitchen" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.94",
+    "bestRating": "5",
+    "reviewCount": "18"
+  },
+  "sameAs": [
+    "https://www.instagram.com/bullesetspa31/",
+    "https://www.facebook.com/people/Bulles-Spa/100088153282489/"
+  ]
+}
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#E4D8C8',
+          plaster: '#D6C7B4',
+          ink: '#1E181C',
+          plum: '#2B2029',
+          'plum-light': '#4A3650',
+          copper: '#AE7249',
+          'copper-light': '#C99368',
+          wood: '#A98865',
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['Manrope', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', sans-serif; color: #2B2420; background-color: #E4D8C8; }
+  h1, h2, h3, .font-display { font-family: 'Fraunces', serif; }
+
+  .hero-scrim {
+    background: linear-gradient(100deg, rgba(30,24,28,0.90) 0%, rgba(30,24,28,0.74) 24%, rgba(30,24,28,0.28) 55%, rgba(30,24,28,0.06) 75%);
+  }
+
+  .divider-line {
+    background: linear-gradient(90deg, rgba(174,114,73,0.6), rgba(174,114,73,0));
+    height: 1px;
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: fadeUp 0.9s ease-out forwards;
+  }
+  .delay-1 { animation-delay: .15s; }
+  .delay-2 { animation-delay: .3s; }
+  .delay-3 { animation-delay: .45s; }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-up { animation: none; opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -4px;
+    width: 0%; height: 1px;
+    background: #AE7249;
+    transition: width .25s ease;
+  }
+  .nav-link:hover::after { width: 100%; }
+
+  .extra-row + .extra-row { border-top: 1px solid rgba(42,32,36,0.1); }
+
+  #mobile-menu { transition: max-height .35s ease, opacity .25s ease; }
+</style>
+</head>
+
+<body class="bg-cream text-ink antialiased">
+
+<!-- ===================== HEADER / NAV ===================== -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-ink/5">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="#hero" class="flex items-center"><img src="../images/logo.png" alt="Bulles et Spa" width="308" height="356" class="h-14 w-auto"></a>
+
+    <nav class="hidden md:flex items-center gap-9 text-[15px] text-ink/80">
+      <a href="#logement" class="nav-link">The Loft</a>
+      <a href="#equipements" class="nav-link">Amenities</a>
+      <a href="#offres" class="nav-link">Offers &amp; Extras</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="../index.html" class="nav-link text-ink/50">FR</a>
+    </nav>
+
+    <a href="#reserver" class="hidden md:inline-flex items-center bg-plum text-cream text-[15px] px-6 py-3 rounded-sm hover:bg-copper transition-colors duration-300">
+      Book my stay
+    </a>
+
+    <button id="menu-btn" class="md:hidden text-plum" aria-label="Open menu" aria-expanded="false">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 opacity-0 bg-cream border-t border-ink/5">
+    <div class="flex flex-col px-6 py-5 gap-4 text-ink/80">
+      <a href="#logement" class="mobile-link">The Loft</a>
+      <a href="#equipements" class="mobile-link">Amenities</a>
+      <a href="#offres" class="mobile-link">Offers &amp; Extras</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="../index.html" class="mobile-link">Français</a>
+      <a href="#reserver" class="mt-1 inline-flex justify-center bg-plum text-cream px-6 py-3 rounded-sm">Book my stay</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero" class="relative min-h-screen flex items-end md:items-center">
+  <div class="absolute inset-0">
+    <img src="../images/hero-salon-spa.jpg" alt="Wellness lounge at the Bulles & Spa loft, rattan armchairs and warm stone" width="1200" height="1600" class="w-full h-full object-cover">
+    <div class="absolute inset-0 hero-scrim"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pb-20 pt-40 md:py-0 w-full">
+    <div class="max-w-xl">
+      <p class="fade-up text-cream/55 text-sm tracking-wide mb-5">Blagnac · just outside Toulouse</p>
+      <h1 class="fade-up delay-1 font-display text-cream text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mb-6">
+        A pause for two, just for you
+      </h1>
+      <p class="fade-up delay-2 text-cream/85 text-lg leading-relaxed mb-9 max-w-md">
+        Private loft with jacuzzi, infrared sauna and massage room — to slow down, reconnect, and leave with a memory that stays.
+      </p>
+      <div class="fade-up delay-3 flex flex-wrap gap-4">
+        <a href="#reserver" class="inline-flex items-center bg-copper text-cream px-7 py-3.5 rounded-sm hover:bg-copper-light transition-colors duration-300">
+          Book my stay
+        </a>
+        <a href="#logement" class="inline-flex items-center border border-cream/40 text-cream px-7 py-3.5 rounded-sm hover:bg-cream/10 transition-colors duration-300">
+          Discover the loft
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THE LOFT & AMENITIES ===================== -->
+<section id="logement" class="py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid md:grid-cols-2 gap-14 items-center mb-24">
+      <div>
+        <p class="text-plum/55 text-sm tracking-wide mb-4">The Loft</p>
+        <h2 class="font-display text-3xl md:text-4xl leading-tight mb-5">A loft designed as a retreat</h2>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-xs tracking-wide text-plum bg-plum/[0.06] border border-plum/15 rounded-full px-3 py-1.5">150 m²</span>
+          <span class="text-xs tracking-wide text-plum bg-plum/[0.06] border border-plum/15 rounded-full px-3 py-1.5">Up to 4 guests</span>
+          <span class="text-xs tracking-wide text-plum bg-plum/[0.06] border border-plum/15 rounded-full px-3 py-1.5">1 or 2 suites depending on package</span>
+          <span class="text-xs tracking-wide text-plum bg-plum/[0.06] border border-plum/15 rounded-full px-3 py-1.5">Self check-in</span>
+        </div>
+        <p class="text-ink/75 leading-relaxed mb-5 max-w-md">
+          One or two suites depending on the package booked, an equipped kitchen and a workspace — Bulles &amp; Spa isn't just a place to sleep for the night, but somewhere every detail invites you to forget the outside world, if only for a few hours.
+        </p>
+        <p class="text-ink/75 leading-relaxed max-w-md">
+          Business travellers, couples looking for calm, or a moment to celebrate: the loft adapts, while keeping the same standard of comfort and discretion.
+        </p>
+      </div>
+      <div class="rounded-sm overflow-hidden">
+        <img src="../images/cuisine.jpg" alt="Equipped kitchen at the Bulles & Spa loft, central island and storage" width="1400" height="1050" class="w-full h-full object-cover aspect-[4/3]" loading="lazy">
+      </div>
+    </div>
+
+
+    <!-- SUITES & MASSAGE GALLERY -->
+    <div class="grid sm:grid-cols-3 gap-6 mb-24">
+      <div>
+        <div class="rounded-sm overflow-hidden mb-3">
+          <img src="../images/suite-claire.jpg" alt="Bright suite at the Bulles & Spa loft, carved headboard" width="1064" height="703" class="w-full h-full object-cover aspect-[3/4]" loading="lazy">
+        </div>
+        <p class="text-ink/60 text-sm">The Bright Suite</p>
+      </div>
+      <div>
+        <div class="rounded-sm overflow-hidden mb-3">
+          <img src="../images/suite-emeraude.jpg" alt="Emerald suite at the Bulles & Spa loft, bed and wooden slats facing the camera" width="1064" height="728" class="w-full h-full object-cover aspect-[3/4]" loading="lazy">
+        </div>
+        <p class="text-ink/60 text-sm">The Emerald Suite</p>
+      </div>
+      <div>
+        <div class="rounded-sm overflow-hidden mb-3">
+          <img src="../images/salle-massage.jpg" alt="Private massage room at the Bulles & Spa loft" width="1064" height="701" class="w-full h-full object-cover aspect-[3/4]" loading="lazy">
+        </div>
+        <p class="text-ink/60 text-sm">The massage room</p>
+      </div>
+    </div>
+
+    <!-- AMENITIES -->
+    <div id="equipements" class="scroll-mt-24">
+      <p class="text-plum/55 text-sm tracking-wide mb-4">Amenities</p>
+      <h3 class="font-display text-2xl md:text-3xl mb-12 max-w-lg">Everything you need to truly unwind</h3>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
+        <div>
+          <svg class="text-plum/45 mb-4" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 17c1.2 1.4 2.6 1.4 3.8 0 1.2 1.4 2.6 1.4 3.8 0 1.2 1.4 2.6 1.4 3.8 0 1.2 1.4 2.6 1.4 3.8 0"/><path d="M4 13V7a3 3 0 0 1 3-3h1a2 2 0 0 1 2 2v4"/><path d="M4 13h16v0a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/></svg>
+          <h4 class="font-display text-lg mb-2">Private jacuzzi</h4>
+          <p class="text-ink/70 text-sm leading-relaxed">A spa just for you, designed for two, in a soft, hushed atmosphere.</p>
+        </div>
+        <div>
+          <svg class="text-plum/45 mb-4" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="4"/></svg>
+          <h4 class="font-display text-lg mb-2">Infrared sauna</h4>
+          <p class="text-ink/70 text-sm leading-relaxed">A gentle, enveloping heat, to ease tension after a day of travel or work.</p>
+        </div>
+        <div>
+          <svg class="text-plum/45 mb-4" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 21c1-3 3-5 8-5s7 2 8 5"/><circle cx="12" cy="8" r="4"/></svg>
+          <h4 class="font-display text-lg mb-2">Massage room</h4>
+          <p class="text-ink/70 text-sm leading-relaxed">A private space for free use, or a treatment with a partner therapist by appointment. Reserved for couples and mixed groups — single men are not accepted.</p>
+          <a href="massages.html" class="inline-block mt-3 text-plum text-sm border-b border-plum/40 hover:border-plum transition-colors">See massages &amp; rates →</a>
+        </div>
+        <div>
+          <svg class="text-plum/45 mb-4" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 18v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5"/><path d="M3 18h18"/><path d="M7 11V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4"/></svg>
+          <h4 class="font-display text-lg mb-2">Suites</h4>
+          <p class="text-ink/70 text-sm leading-relaxed">One suite or both, depending on the package booked — each with its own private bathroom, for everyone's comfort and privacy.</p>
+        </div>
+        <div>
+          <svg class="text-plum/45 mb-4" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 3h16l-1.5 9a3 3 0 0 1-3 2.5h-7a3 3 0 0 1-3-2.5L4 3Z"/><path d="M9 21h6M12 14.5V21"/></svg>
+          <h4 class="font-display text-lg mb-2">Equipped kitchen</h4>
+          <p class="text-ink/70 text-sm leading-relaxed">Everything you need for a dinner for two, or to welcome your private chef.</p>
+        </div>
+        <div>
+          <svg class="text-plum/45 mb-4" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="4" width="18" height="14" rx="1.5"/><path d="M3 9h18M8 4v14"/></svg>
+          <h4 class="font-display text-lg mb-2">Workspace</h4>
+          <p class="text-ink/70 text-sm leading-relaxed">A calm, bright corner, for stays that combine work travel and relaxation.</p>
+        </div>
+        <div>
+          <svg class="text-plum/45 mb-4" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2v20M4.2 6l15.6 12M19.8 6L4.2 18M2 12h20"/></svg>
+          <h4 class="font-display text-lg mb-2">Air conditioning</h4>
+          <p class="text-ink/70 text-sm leading-relaxed">Reliable comfort even during a heatwave, for cool nights whatever the season.</p>
+        </div>
+        <div>
+          <svg class="text-plum/45 mb-4" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 8.5a14 14 0 0 1 18 0"/><path d="M6.5 12.5a9 9 0 0 1 11 0"/><path d="M10 16.5a4 4 0 0 1 4 0"/><circle cx="12" cy="20" r="1.1" fill="currentColor" stroke="none"/></svg>
+          <h4 class="font-display text-lg mb-2">Wifi</h4>
+          <p class="text-ink/70 text-sm leading-relaxed">Fibre connection throughout the loft, to stay reachable or disconnect, whichever you prefer.</p>
+        </div>
+        <div>
+          <svg class="text-plum/45 mb-4" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="12" rx="1"/><path d="M8 12l2.5-3.5L13 11l2.5-4L18 12"/><path d="M9 20h6M12 16v4"/></svg>
+          <h4 class="font-display text-lg mb-2">Frame TV</h4>
+          <p class="text-ink/70 text-sm leading-relaxed">In the living room, a Frame TV that displays a work of art whenever it's switched off.</p>
+        </div>
+      </div>
+
+      <p class="text-ink/50 text-sm mt-10">Also available: washing machine and dryer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEASER GALLERY ===================== -->
+<section id="galerie" class="py-24 md:py-32 bg-plum text-cream">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10">
+    <p class="text-cream/55 text-sm tracking-wide mb-4">A preview</p>
+    <h2 class="font-display text-3xl md:text-4xl leading-tight mb-14 max-w-xl">The loft, as you'll discover it</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+      <div class="col-span-2 row-span-2 rounded-sm overflow-hidden">
+        <img src="../images/jacuzzi.jpg" alt="Private jacuzzi at the Bulles & Spa loft, soft lighting" width="1064" height="702" class="w-full h-full object-cover aspect-square md:aspect-auto" loading="lazy">
+      </div>
+      <div class="rounded-sm overflow-hidden">
+        <img src="../images/sauna.jpg" alt="Infrared sauna at the Bulles & Spa loft, green chromotherapy" width="1064" height="703" class="w-full h-full object-cover aspect-square" loading="lazy">
+      </div>
+      <div class="rounded-sm overflow-hidden">
+        <img src="../images/escalier.jpg" alt="Staircase leading to the suites at the Bulles & Spa loft" width="1064" height="728" class="w-full h-full object-cover aspect-square" loading="lazy">
+      </div>
+      <div class="rounded-sm overflow-hidden">
+        <img src="../images/salon.jpg" alt="Living room at the Bulles & Spa loft, sofa and large bay windows" width="1064" height="705" class="w-full h-full object-cover aspect-square" loading="lazy">
+      </div>
+      <div class="rounded-sm overflow-hidden">
+        <img src="../images/coin-lecture.jpg" alt="Reading nook under the eaves at the Bulles & Spa loft" width="1064" height="704" class="w-full h-full object-cover aspect-square" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OFFERS & EXTRAS ===================== -->
+<section id="offres" class="py-24 md:py-32 bg-plaster">
+  <div class="max-w-5xl mx-auto px-6 lg:px-10">
+    <p class="text-plum/55 text-sm tracking-wide mb-4">Offers &amp; Extras</p>
+    <h2 class="font-display text-3xl md:text-4xl leading-tight mb-4 max-w-lg">Elevate your stay, tailor-made</h2>
+    <p class="text-ink/70 leading-relaxed mb-14 max-w-lg">A birthday, a proposal, a surprise for two: add a few extra touches to your stay, booked ahead of your arrival.</p>
+
+    <div class="border-t border-ink/10">
+      <div class="extra-row flex flex-wrap items-center justify-between gap-4 py-6">
+        <div>
+          <h3 class="font-display text-lg">Romantic setup</h3>
+          <p class="text-ink/65 text-sm mt-1">A scene set before you arrive.</p>
+        </div>
+        <span class="text-plum font-display text-lg whitespace-nowrap">On request</span>
+      </div>
+      <div class="extra-row flex flex-wrap items-center justify-between gap-4 py-6">
+        <div>
+          <h3 class="font-display text-lg">Bottle of champagne</h3>
+          <p class="text-ink/65 text-sm mt-1">Served chilled, on arrival.</p>
+        </div>
+        <span class="text-plum font-display text-lg whitespace-nowrap">€50</span>
+      </div>
+      <div class="extra-row flex flex-wrap items-center justify-between gap-4 py-6">
+        <div>
+          <h3 class="font-display text-lg">Gourmet hamper</h3>
+          <p class="text-ink/65 text-sm mt-1">A selection of local treats to discover on site.</p>
+        </div>
+        <span class="text-plum font-display text-lg whitespace-nowrap">On request</span>
+      </div>
+      <div class="extra-row flex flex-wrap items-center justify-between gap-4 py-6">
+        <div>
+          <h3 class="font-display text-lg">Wellness massage</h3>
+          <p class="text-ink/65 text-sm mt-1">A treatment with a partner therapist, in the private massage room. <a href="massages.html" class="text-plum border-b border-plum/40 hover:border-plum transition-colors">Details &amp; rates</a></p>
+        </div>
+        <span class="text-plum font-display text-lg whitespace-nowrap">from €150</span>
+      </div>
+      <div class="extra-row flex flex-wrap items-center justify-between gap-4 py-6">
+        <div>
+          <h3 class="font-display text-lg">Early check-in</h3>
+          <p class="text-ink/65 text-sm mt-1">Enjoy the loft earlier in the day.</p>
+        </div>
+        <span class="text-plum font-display text-lg whitespace-nowrap">€20 / hour</span>
+      </div>
+      <div class="extra-row flex flex-wrap items-center justify-between gap-4 py-6">
+        <div>
+          <h3 class="font-display text-lg">Late check-out</h3>
+          <p class="text-ink/65 text-sm mt-1">Extend your morning with no rush.</p>
+        </div>
+        <span class="text-plum font-display text-lg whitespace-nowrap">€20 / hour</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section id="avis" class="py-24 md:py-32 bg-plaster">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-14">
+      <div>
+        <p class="text-plum/55 text-sm tracking-wide mb-4">Reviews</p>
+        <h2 class="font-display text-3xl md:text-4xl leading-tight">What our guests say</h2>
+      </div>
+      <div class="flex items-center gap-8 flex-wrap">
+        <div class="text-right">
+          <p class="font-display text-4xl text-plum">4.94<span class="text-xl text-ink/40">/5</span></p>
+          <p class="text-ink/60 text-sm">average rating on Airbnb (18 reviews)</p>
+          <p class="text-copper text-xs font-medium mt-1 tracking-wide">★ Airbnb Superhost</p>
+        </div>
+        <div id="google-stat" class="flex items-center gap-3 bg-white rounded-lg shadow-sm px-5 py-3 hidden">
+          <svg width="26" height="26" viewBox="0 0 48 48" class="shrink-0"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+          <div class="text-left">
+            <div class="flex items-center gap-1.5">
+              <span class="font-display text-xl text-ink leading-none"><span id="google-rating-value">—</span>/5</span>
+              <span id="google-stars" class="flex gap-0.5"></span>
+            </div>
+            <p class="text-ink/50 text-xs mt-1"><span id="google-rating-count">—</span> Google reviews</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="avis-list" class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col">
+        <div class="flex items-center justify-between mb-3">
+          <span class="flex gap-0.5 text-[#FBBC05]">★★★★★</span>
+          <svg width="18" height="18" viewBox="0 0 48 48" class="shrink-0"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+        </div>
+        <p class="text-ink/80 text-sm leading-relaxed mb-4">Le logement est magnifique, parfaitement équipé et pensé pour se détendre. Le jacuzzi et le sauna sont un vrai plus pour déconnecter et profiter d'un moment de calme.</p>
+        <div class="mt-auto pt-2 border-t border-ink/5">
+          <p class="text-sm font-medium text-ink">Karlyn Paulet</p>
+          <p class="text-xs text-ink/45">Google review</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col">
+        <div class="flex items-center justify-between mb-3">
+          <span class="flex gap-0.5 text-[#FBBC05]">★★★★★</span>
+          <svg width="18" height="18" viewBox="0 0 48 48" class="shrink-0"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+        </div>
+        <p class="text-ink/80 text-sm leading-relaxed mb-4">L'appartement Bulles &amp; Spa est tout simplement magnifique !!! Spacieux, lumineux, décoré avec goût et au calme. Le jacuzzi et le sauna sont la cerise sur le gâteau !</p>
+        <div class="mt-auto pt-2 border-t border-ink/5">
+          <p class="text-sm font-medium text-ink">Edwige Maunlley</p>
+          <p class="text-xs text-ink/45">Google review</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col">
+        <div class="flex items-center justify-between mb-3">
+          <span class="flex gap-0.5 text-[#FBBC05]">★★★★★</span>
+          <svg width="18" height="18" viewBox="0 0 48 48" class="shrink-0"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+        </div>
+        <p class="text-ink/80 text-sm leading-relaxed mb-4">Appartement magnifique et bien équipé. Je recommande à toutes les personnes qui recherchent le calme et la sérénité.</p>
+        <div class="mt-auto pt-2 border-t border-ink/5">
+          <p class="text-sm font-medium text-ink">Deschamps Martin</p>
+          <p class="text-xs text-ink/45">Google review</p>
+        </div>
+      </div>
+    </div>
+    <p class="text-ink/50 text-sm mt-8">Read all our reviews on <a href="https://www.google.com/search?q=Bulles%20et%20Spa%20Blagnac%20avis" target="_blank" rel="noopener" class="border-b border-ink/20 hover:border-plum transition-colors">Google</a>.</p>
+  </div>
+</section>
+
+<!-- ===================== LOCATION & ARRIVAL ===================== -->
+<section id="acces" class="py-24 md:py-32 bg-plum text-cream">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-14 items-center">
+    <div>
+      <p class="text-cream/55 text-sm tracking-wide mb-4">Location &amp; Arrival</p>
+      <h2 class="font-display text-3xl md:text-4xl leading-tight mb-6">In the heart of old Blagnac</h2>
+      <ul class="space-y-5 text-cream/80 leading-relaxed">
+        <li class="flex gap-4">
+          <span class="text-cream/35">—</span>
+          <span>5 minutes from Toulouse-Blagnac airport and Airbus, 15 minutes from central Toulouse.</span>
+        </li>
+        <li class="flex gap-4">
+          <span class="text-cream/35">—</span>
+          <span>Restaurants and shops within walking distance, just steps from Parc des Ramiers.</span>
+        </li>
+        <li class="flex gap-4">
+          <span class="text-cream/35">—</span>
+          <span>Parking easy to find in the area.</span>
+        </li>
+        <li class="flex gap-4">
+          <span class="text-cream/35">—</span>
+          <span>Self check-in via a secure key box, for a discreet arrival at any hour.</span>
+        </li>
+      </ul>
+    </div>
+    <div class="rounded-sm overflow-hidden aspect-[3/4]">
+      <iframe src="https://www.google.com/maps?q=43.6338398,1.3990581&z=17&output=embed" class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bulles &amp; Spa location - 15 Place Intérieure de l'Église, Blagnac"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER / CONTACT ===================== -->
+<!-- ===================== BOOKING ===================== -->
+<section id="reserver" class="py-24 md:py-32 bg-plaster">
+  <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center">
+    <p class="text-plum/55 text-sm tracking-wide mb-4">Booking</p>
+    <h2 class="font-display text-3xl md:text-4xl leading-tight mb-6">Check our availability</h2>
+    <p class="text-ink/70 leading-relaxed mb-10 max-w-lg mx-auto">A real-time booking calendar is coming soon to this page. In the meantime, book directly on one of our partner platforms:</p>
+
+    <div class="grid sm:grid-cols-2 gap-5 mb-10 text-left">
+      <div class="bg-white rounded-lg shadow-sm p-6">
+        <h3 class="font-display text-lg mb-2">Main Suite</h3>
+        <p class="text-ink/60 text-xs tracking-wide mb-3">1 suite — the Emerald Suite</p>
+        <p class="text-ink/70 text-sm leading-relaxed">Access to the wellness area (jacuzzi, sauna, massage room), the equipped kitchen, the living room, the workspace and the Emerald Suite.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-sm p-6">
+        <h3 class="font-display text-lg mb-2">Double Suites</h3>
+        <p class="text-ink/60 text-xs tracking-wide mb-3">Both suites — the full loft</p>
+        <p class="text-ink/70 text-sm leading-relaxed">Everything included in the Main Suite, plus access to the Bright Suite.</p>
+      </div>
+    </div>
+
+    <!-- Beds24 calendar slot: to embed once the widget link is received -->
+    <!-- <div id="beds24-calendar"></div> -->
+
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="https://www.airbnb.fr/rooms/804258849629311650" target="_blank" rel="noopener" class="inline-block bg-copper text-cream px-8 py-3.5 rounded-sm hover:bg-copper-light transition-colors duration-300">Book on Airbnb</a>
+      <a href="https://www.booking.com/hotel/fr/bulles-amp-spa-blagnac.fr.html" target="_blank" rel="noopener" class="inline-block border border-plum/30 text-plum px-8 py-3.5 rounded-sm hover:bg-plum/5 transition-colors duration-300">Book on Booking.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INSTAGRAM ===================== -->
+<section id="instagram" class="py-24 md:py-32 bg-plaster">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10">
+    <div class="flex items-center justify-between mb-14 flex-wrap gap-4">
+      <div>
+        <p class="text-plum/55 text-sm tracking-wide mb-4">Instagram</p>
+        <h2 class="font-display text-3xl md:text-4xl leading-tight">Follow us: @bullesetspa31</h2>
+      </div>
+      <a href="https://www.instagram.com/bullesetspa31/" target="_blank" rel="noopener" class="text-plum text-sm border-b border-plum/40 hover:border-plum transition-colors whitespace-nowrap">View profile →</a>
+    </div>
+    <div id="instagram-grid" class="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4"></div>
+  </div>
+</section>
+
+<footer id="contact" class="py-20 md:py-28 bg-ink text-cream/90">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10">
+    <div class="grid md:grid-cols-2 gap-16 mb-16">
+      <div>
+        <h2 class="font-display text-3xl mb-4">Ready for your pause?</h2>
+        <p class="text-cream/60 leading-relaxed mb-8 max-w-sm">Write to us to check availability or personalise your stay — we'll get back to you quickly.</p>
+        <div class="space-y-2 text-cream/70 text-sm">
+          <p>Bulles &amp; Spa — Blagnac, Haute-Garonne, France</p>
+          <p>contact@bullesetspa.fr</p>
+        </div>
+        <div class="flex gap-5 mt-6">
+          <a href="https://www.instagram.com/bullesetspa31/" target="_blank" rel="noopener" aria-label="Instagram" class="text-cream/60 hover:text-copper-light transition-colors">Instagram</a>
+          <a href="https://www.facebook.com/people/Bulles-Spa/100088153282489/" target="_blank" rel="noopener" aria-label="Facebook" class="text-cream/60 hover:text-copper-light transition-colors">Facebook</a>
+        </div>
+      </div>
+
+      <form class="space-y-4" onsubmit="event.preventDefault();">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <input type="text" placeholder="First name" class="w-full bg-transparent border border-cream/25 rounded-sm px-4 py-3 text-sm placeholder:text-cream/40 focus:outline-none focus:border-copper-light">
+          <input type="email" placeholder="Email" class="w-full bg-transparent border border-cream/25 rounded-sm px-4 py-3 text-sm placeholder:text-cream/40 focus:outline-none focus:border-copper-light">
+        </div>
+        <input type="text" placeholder="Planned dates" class="w-full bg-transparent border border-cream/25 rounded-sm px-4 py-3 text-sm placeholder:text-cream/40 focus:outline-none focus:border-copper-light">
+        <textarea rows="3" placeholder="Your message" class="w-full bg-transparent border border-cream/25 rounded-sm px-4 py-3 text-sm placeholder:text-cream/40 focus:outline-none focus:border-copper-light"></textarea>
+        <button type="submit" class="w-full bg-copper text-cream py-3.5 rounded-sm hover:bg-copper-light transition-colors duration-300">Send my request</button>
+      </form>
+    </div>
+
+    <div class="divider-line mb-8"></div>
+
+    <div class="flex flex-wrap items-center justify-between gap-4 text-xs text-cream/40">
+      <p>© 2026 Bulles &amp; Spa. All rights reserved.</p>
+      <p><a href="../mentions-legales.html" class="hover:text-cream/70 transition-colors">Legal notice (FR)</a> · <a href="../confidentialite.html" class="hover:text-cream/70 transition-colors">Privacy policy (FR)</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Concierge WhatsApp bubble -->
+<a href="https://wa.me/33661718973?text=Hello%2C%20I%27m%20contacting%20the%20Bulles%20%26%20Spa%20concierge" target="_blank" rel="noopener" aria-label="Contact the concierge on WhatsApp"
+   class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] shadow-lg hover:scale-105 transition-transform duration-200">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="white"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.696 4.61 1.899 6.484L4 29l7.72-1.855A11.94 11.94 0 0 0 16.001 27C22.63 27 28 21.627 28 15S22.63 3 16.001 3Zm0 21.75c-1.98 0-3.822-.578-5.373-1.573l-.386-.243-4.583 1.101 1.124-4.464-.252-.399A9.71 9.71 0 0 1 5.25 15c0-5.936 4.815-10.75 10.751-10.75S26.752 9.064 26.752 15 21.937 24.75 16.001 24.75Zm5.893-8.06c-.322-.161-1.906-.94-2.202-1.048-.295-.108-.51-.161-.724.161-.214.322-.831 1.048-1.019 1.263-.188.215-.376.242-.698.081-.322-.161-1.359-.501-2.588-1.598-.957-.853-1.603-1.907-1.791-2.229-.188-.322-.02-.496.141-.656.145-.144.322-.376.483-.564.161-.188.214-.322.322-.537.107-.215.053-.403-.027-.564-.08-.161-.724-1.745-.992-2.39-.261-.628-.526-.543-.724-.553-.187-.009-.402-.011-.617-.011-.215 0-.564.081-.859.403-.295.322-1.126 1.1-1.126 2.683 0 1.583 1.153 3.113 1.314 3.328.161.215 2.267 3.463 5.494 4.856.768.332 1.367.53 1.834.678.771.245 1.472.21 2.026.128.618-.092 1.906-.779 2.174-1.531.268-.752.268-1.397.188-1.531-.08-.134-.295-.215-.617-.376Z"/></svg>
+</a>
+
+<script>
+  const GOOGLE_G_SVG = `<svg width="18" height="18" viewBox="0 0 48 48" class="shrink-0"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>`;
+
+  function starRow(rating) {
+    const full = Math.round(rating);
+    return '<span class="flex gap-0.5 text-[#FBBC05]">' + '★'.repeat(full) + '<span class="text-ink/15">' + '★'.repeat(5 - full) + '</span></span>';
+  }
+
+  function avatarHtml(photoUrl, name) {
+    if (!photoUrl) return '';
+    return `<img src="${photoUrl}" alt="${name}" referrerpolicy="no-referrer" onerror="this.style.display='none'" class="w-9 h-9 rounded-full object-cover shrink-0" loading="lazy">`;
+  }
+
+  // Loads Google reviews generated automatically each day (see .github/workflows/update-reviews.yml)
+  // If the file doesn't exist yet or is empty, the 3 reviews already in the HTML stay displayed as-is.
+  fetch('../reviews.json', { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : null)
+    .then(data => {
+      if (!data || !data.reviews || data.reviews.length === 0) return;
+
+      const list = document.getElementById('avis-list');
+      list.innerHTML = data.reviews.map(r => {
+        const text = r.text.length > 260 ? r.text.slice(0, 260).trim() + '…' : r.text;
+        return `
+        <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            ${starRow(r.rating)}
+            ${GOOGLE_G_SVG}
+          </div>
+          <p class="text-ink/80 text-sm leading-relaxed mb-4">${text}</p>
+          <div class="mt-auto pt-2 border-t border-ink/5 flex items-center gap-3">
+            ${avatarHtml(r.photo, r.author)}
+            <div>
+              <p class="text-sm font-medium text-ink">${r.author}</p>
+              <p class="text-xs text-ink/45">Google review</p>
+            </div>
+          </div>
+        </div>`;
+      }).join('');
+
+      if (data.rating && data.total) {
+        document.getElementById('google-rating-value').textContent = String(data.rating);
+        document.getElementById('google-rating-count').textContent = data.total;
+        document.getElementById('google-stars').innerHTML = starRow(data.rating);
+        document.getElementById('google-stat').classList.remove('hidden');
+      }
+    })
+    .catch(() => { /* not a problem, the static reviews already in the HTML remain */ });
+
+  // Loads the Instagram feed generated automatically each day (see .github/workflows/update-instagram.yml)
+  fetch('../feed.json', { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : null)
+    .then(data => {
+      if (!data || !data.posts || data.posts.length === 0) return;
+
+      const grid = document.getElementById('instagram-grid');
+      grid.innerHTML = data.posts.map(p => {
+        const caption = (p.caption || '').slice(0, 100).trim();
+        return `
+        <a href="${p.link}" target="_blank" rel="noopener" class="group relative block aspect-square overflow-hidden rounded-sm bg-ink/5">
+          <img src="${p.image}" alt="Instagram post from Bulles & Spa" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute inset-0 bg-plum/0 group-hover:bg-plum/50 transition-colors duration-300 flex items-end p-3 opacity-0 group-hover:opacity-100">
+            <p class="text-cream text-xs leading-snug line-clamp-3">${caption}</p>
+          </div>
+        </a>`;
+      }).join('');
+    })
+    .catch(() => { /* not a problem, the section just stays empty until the bot's first run */ });
+
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+  menuBtn.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    menuBtn.setAttribute('aria-expanded', String(menuOpen));
+    mobileMenu.style.maxHeight = menuOpen ? mobileMenu.scrollHeight + 'px' : '0px';
+    mobileMenu.style.opacity = menuOpen ? '1' : '0';
+  });
+  document.querySelectorAll('#mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => {
+      menuOpen = false;
+      menuBtn.setAttribute('aria-expanded', 'false');
+      mobileMenu.style.maxHeight = '0px';
+      mobileMenu.style.opacity = '0';
+    });
+  });
+</script>
+
+</body>
+</html>
