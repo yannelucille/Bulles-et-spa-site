@@ -84,7 +84,9 @@
     var first = true;
     frame.addEventListener('load', function () {
       // À chaque étape du tunnel, on remonte en haut du module de réservation.
-      if (!first) frame.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Seulement si le haut du module est sorti de l'écran, en tenant compte de l'en-tête fixe.
+      var top = frame.getBoundingClientRect().top;
+      if (!first && top < 0) window.scrollTo({ top: top + window.scrollY - 100, behavior: 'smooth' });
       first = false;
     });
     frame.src = src;
