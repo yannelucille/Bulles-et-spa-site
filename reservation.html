@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réserver votre séjour — Bulles &amp; Spa, Blagnac</title>
+<meta name="description" content="Réservez en direct le loft Bulles &amp; Spa à Blagnac : jacuzzi, sauna et salle de massage privatifs. Paiement sécurisé, meilleur tarif.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.bullesetspa.fr/reservation.html">
+<link rel="alternate" hreflang="fr" href="https://www.bullesetspa.fr/reservation.html">
+<link rel="alternate" hreflang="en" href="https://www.bullesetspa.fr/en/reservation.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { cream: '#E4D8C8', plaster: '#D6C7B4', ink: '#1E181C', plum: '#2B2029', copper: '#AE7249', 'copper-light': '#C99368' },
+    fontFamily: { display: ['Fraunces', 'serif'], body: ['Manrope', 'sans-serif'] } } } }
+</script>
+<style>
+  body { font-family: 'Manrope', sans-serif; background-color: #E4D8C8; }
+  h1, h2, h3, .font-display { font-family: 'Fraunces', serif; }
+  #beds24-frame { width: 100%; border: 0; display: block; height: 1500px; }
+  @media (max-width: 767px) { #beds24-frame { height: 1900px; } }
+</style>
+</head>
+
+<body class="bg-cream text-ink antialiased">
+
+<header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-sm border-b border-ink/5">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20 gap-4">
+    <a href="index.html" class="flex items-center"><img src="images/logo.png" alt="Bulles et Spa" width="308" height="356" class="h-14 w-auto"></a>
+    <div class="flex items-center gap-6 text-sm">
+      <a href="en/reservation.html" class="text-ink/50 hover:text-plum">English</a>
+      <a href="index.html" class="text-ink/70 border-b border-ink/20 hover:border-plum">← Retour au loft</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 lg:px-10 py-12 md:py-16">
+  <p class="text-plum/55 text-sm tracking-wide mb-3">Réservation en direct</p>
+  <h1 class="font-display text-3xl md:text-4xl leading-tight mb-3">Réservez votre parenthèse</h1>
+  <p class="text-ink/70 leading-relaxed mb-10 max-w-xl">Choisissez vos dates et votre formule, puis réglez en ligne en toute sécurité.</p>
+
+  <div class="grid lg:grid-cols-[300px_minmax(0,1fr)] gap-8 items-start">
+    <aside class="bg-[#F3ECE2] rounded-sm border border-ink/5 p-6 flex flex-col gap-5 lg:sticky lg:top-28 order-2 lg:order-1">
+      <p class="font-display text-lg">Bon à savoir</p>
+      <ul class="flex flex-col gap-3 text-sm text-ink/75">
+        <li class="flex gap-3"><span class="text-copper shrink-0">✓</span><span>Paiement sécurisé par carte, débité à la réservation</span></li>
+        <li class="flex gap-3"><span class="text-copper shrink-0">✓</span><span>Tarif non remboursable, modification de dates possible selon nos conditions</span></li>
+        <li class="flex gap-3"><span class="text-copper shrink-0">✓</span><span>Caution de 500 € autorisée sur votre carte, sans débit, peu avant l'arrivée</span></li>
+        <li class="flex gap-3"><span class="text-copper shrink-0">✓</span><span>Arrivée autonome grâce à une boîte à clés sécurisée</span></li>
+        <li class="flex gap-3"><span class="text-copper shrink-0">✓</span><span>Le loft entier privatisé : aucun autre client pendant votre séjour</span></li>
+      </ul>
+      <div class="border-t border-ink/10 pt-4 text-sm text-ink/70">
+        Une question avant de réserver ?<br>
+        <a href="https://wa.me/33661718973" target="_blank" rel="noopener" class="text-plum border-b border-plum/40 hover:border-plum">Écrire à la conciergerie sur WhatsApp</a>
+        <p class="text-ink/50 text-xs mt-1 select-all">+33 6 61 71 89 73</p>
+      </div>
+    </aside>
+
+    <section class="bg-white rounded-sm border border-ink/5 overflow-hidden min-w-0 order-1 lg:order-2">
+      <iframe id="beds24-frame" title="Module de réservation Bulles &amp; Spa" loading="eager"></iframe>
+      <p class="px-6 py-4 border-t border-ink/5 text-xs text-ink/50">Le module de réservation ne s'affiche pas ? <a id="beds24-link" href="https://beds24.com/booking2.php?propid=365017&amp;lang=fr" target="_blank" rel="noopener" class="text-plum border-b border-plum/40">Ouvrir la réservation dans un nouvel onglet</a></p>
+    </section>
+  </div>
+</main>
+
+<script>
+  // Transmet à Beds24 les dates choisies dans le calendrier du site (paramètres de l'adresse).
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    params.delete('roomid');           // on affiche les deux formules, pas seulement la Suite Principale
+    params.set('propid', '365017');
+    params.set('lang', 'fr');
+    params.set('referer', 'iframe');
+    var src = 'https://beds24.com/booking2.php?' + params.toString();
+    var frame = document.getElementById('beds24-frame');
+    var first = true;
+    frame.addEventListener('load', function () {
+      // À chaque étape du tunnel, on remonte en haut du module de réservation.
+      if (!first) frame.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      first = false;
+    });
+    frame.src = src;
+    document.getElementById('beds24-link').href = src.replace('referer=iframe', 'referer=site');
+  })();
+</script>
+
+<!-- Bulle WhatsApp conciergerie -->
+<a href="https://wa.me/33661718973?text=Bonjour%2C%20je%20contacte%20la%20conciergerie%20Bulles%20%26%20Spa" target="_blank" rel="noopener" aria-label="Contacter la conciergerie sur WhatsApp"
+   class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] shadow-lg hover:scale-105 transition-transform duration-200">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="white"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.696 4.61 1.899 6.484L4 29l7.72-1.855A11.94 11.94 0 0 0 16.001 27C22.63 27 28 21.627 28 15S22.63 3 16.001 3Zm0 21.75c-1.98 0-3.822-.578-5.373-1.573l-.386-.243-4.583 1.101 1.124-4.464-.252-.399A9.71 9.71 0 0 1 5.25 15c0-5.936 4.815-10.75 10.751-10.75S26.752 9.064 26.752 15 21.937 24.75 16.001 24.75Zm5.893-8.06c-.322-.161-1.906-.94-2.202-1.048-.295-.108-.51-.161-.724.161-.214.322-.831 1.048-1.019 1.263-.188.215-.376.242-.698.081-.322-.161-1.359-.501-2.588-1.598-.957-.853-1.603-1.907-1.791-2.229-.188-.322-.02-.496.141-.656.145-.144.322-.376.483-.564.161-.188.214-.322.322-.537.107-.215.053-.403-.027-.564-.08-.161-.724-1.745-.992-2.39-.261-.628-.526-.543-.724-.553-.187-.009-.402-.011-.617-.011-.215 0-.564.081-.859.403-.295.322-1.126 1.1-1.126 2.683 0 1.583 1.153 3.113 1.314 3.328.161.215 2.267 3.463 5.494 4.856.768.332 1.367.53 1.834.678.771.245 1.472.21 2.026.128.618-.092 1.906-.779 2.174-1.531.268-.752.268-1.397.188-1.531-.08-.134-.295-.215-.617-.376Z"/></svg>
+</a>
+
+</body>
+</html>
