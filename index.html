@@ -653,7 +653,7 @@
     backgroundColor: '#f3ece2', borderColor: '#d6c7b4', boxShadow: false, color: '#2b2029',
     dateFormat: 'dd/mm/yy', formAction: 'https://beds24.com/booking.php', formTarget: '_self', fontSize: '14px',
     pastBackgroundColor: '#f3ece2', pastColor: '#c2b6aa',
-    redirect: 'reservation.html',
+    redirect: new URL('reservation.html', window.location.href).href,  // adresse complète exigée par Beds24
     requestColor: '#5a4e48', requestBackgroundColor: '#d6c7b4',
     unavailableColor: '#b8aa9e', unavailableBackgroundColor: '#f3ece2',
     weekFirstDay: 1, widgetLang: 'fr', widgetTitle: 'Cliquez sur votre date d\'arrivée',
