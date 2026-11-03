@@ -44,4 +44,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://www.bullesetspa.fr/reservation.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.bullesetspa.fr/en/reservation.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
