@@ -2,7 +2,7 @@ name: Update Google Reviews
 
 on:
   schedule:
-    - cron: '0 6 * * *'   # tous les jours à 6h UTC (~8h heure de Paris)
+    - cron: '0 6 * * 1'   # chaque lundi à 6h UTC (~7-8h heure de Paris) – hebdomadaire pour limiter les déploiements Netlify
   workflow_dispatch:       # bouton "Run workflow" manuel dans l'onglet Actions
 
 permissions:

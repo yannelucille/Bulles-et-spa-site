@@ -2,7 +2,7 @@ name: Update Instagram Feed
 
 on:
   schedule:
-    - cron: '30 6 * * *'   # tous les jours à 6h30 UTC (juste après les avis Google)
+    - cron: '30 6 * * 1'   # chaque lundi à 6h30 UTC (juste après les avis Google) – hebdomadaire pour limiter les déploiements Netlify
   workflow_dispatch:        # bouton "Run workflow" manuel dans l'onglet Actions
 
 permissions:

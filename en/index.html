@@ -567,14 +567,17 @@
         </div>
       </div>
 
-      <form class="space-y-4" onsubmit="event.preventDefault();">
+      <form id="contact-form" name="contact-en" method="POST" data-netlify="true" netlify-honeypot="site-web" class="space-y-4">
+        <input type="hidden" name="form-name" value="contact-en">
+        <p class="hidden"><label>Ne pas remplir <input name="site-web"></label></p>
         <div class="grid sm:grid-cols-2 gap-4">
-          <input type="text" placeholder="First name" class="w-full bg-transparent border border-cream/25 rounded-sm px-4 py-3 text-sm placeholder:text-cream/40 focus:outline-none focus:border-copper-light">
-          <input type="email" placeholder="Email" class="w-full bg-transparent border border-cream/25 rounded-sm px-4 py-3 text-sm placeholder:text-cream/40 focus:outline-none focus:border-copper-light">
+          <input type="text" name="prenom" required placeholder="First name" class="w-full bg-transparent border border-cream/25 rounded-sm px-4 py-3 text-sm placeholder:text-cream/40 focus:outline-none focus:border-copper-light">
+          <input type="email" name="email" required placeholder="Email" class="w-full bg-transparent border border-cream/25 rounded-sm px-4 py-3 text-sm placeholder:text-cream/40 focus:outline-none focus:border-copper-light">
         </div>
-        <input type="text" placeholder="Planned dates" class="w-full bg-transparent border border-cream/25 rounded-sm px-4 py-3 text-sm placeholder:text-cream/40 focus:outline-none focus:border-copper-light">
-        <textarea rows="3" placeholder="Your message" class="w-full bg-transparent border border-cream/25 rounded-sm px-4 py-3 text-sm placeholder:text-cream/40 focus:outline-none focus:border-copper-light"></textarea>
+        <input type="text" name="dates" placeholder="Planned dates" class="w-full bg-transparent border border-cream/25 rounded-sm px-4 py-3 text-sm placeholder:text-cream/40 focus:outline-none focus:border-copper-light">
+        <textarea name="message" rows="3" required placeholder="Your message" class="w-full bg-transparent border border-cream/25 rounded-sm px-4 py-3 text-sm placeholder:text-cream/40 focus:outline-none focus:border-copper-light"></textarea>
         <button type="submit" class="w-full bg-copper text-cream py-3.5 rounded-sm hover:bg-copper-light transition-colors duration-300">Send my request</button>
+        <p id="contact-status" class="text-sm text-cream/80 hidden" role="status"></p>
       </form>
     </div>
 
@@ -776,5 +779,21 @@
   });
 </script>
 
+<script>
+  // Formulaire de contact : envoi vers Netlify Forms sans quitter la page
+  (function () {
+    var f = document.getElementById('contact-form'); if (!f) return;
+    var st = document.getElementById('contact-status');
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = f.querySelector('button[type=submit]'); btn.disabled = true;
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(f)).toString() })
+        .then(function (r) { if (!r.ok) throw 0; f.reset(); st.textContent = 'Thank you! Your message has been sent, we will reply shortly.'; })
+        .catch(function () { st.textContent = 'Sending failed. Please message us on WhatsApp or at contact@bullesetspa.fr.'; btn.disabled = false; })
+        .finally(function () { st.classList.remove('hidden'); });
+    });
+  })();
+</script>
 </body>
 </html>
