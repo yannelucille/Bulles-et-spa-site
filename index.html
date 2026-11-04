@@ -665,26 +665,27 @@
   function mount(id, months) {
     if (!window.jQuery || !jQuery.fn.bookWidget || !document.getElementById(id)) return;
     jQuery('#' + id).bookWidget(jQuery.extend({}, BEDS24, { numMonth: months }));
-    // Le roomid ne sert qu'à colorer le calendrier (une réservation bloque tout le loft).
-    // Au clic sur une date, on va directement sur la page Réservation avec 1 nuit par défaut
-    // et sans filtre de chambre, pour afficher les deux formules (Suite Principale + Double Suites).
-    var form = document.querySelector('#' + id + ' form');
-    if (!form) return;
-    function go(e) {
-      if (e) e.preventDefault();
-      var v = (form.elements.checkin && form.elements.checkin.value) || '';
-      var m = v.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/) || v.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
-      var iso = '';
-      if (m) iso = m[1].length === 4 ? m[1] + '-' + m[2] + '-' + m[3]
-                                     : (m[3].length === 2 ? '20' + m[3] : m[3]) + '-' + m[2] + '-' + m[1];
-      var url = new URL('reservation.html', window.location.href);
-      if (iso) url.searchParams.set('checkin', iso);
-      url.searchParams.set('numnight', '1');
-      window.location.href = url.href;
-    }
-    form.addEventListener('submit', go);
-    form.submit = go;
   }
+  // Le roomid ne sert qu'à colorer le calendrier (une réservation bloque tout le loft).
+  // Au clic sur une date libre, on va directement sur la page Réservation avec 1 nuit par défaut
+  // et sans filtre de chambre, pour afficher les deux formules (Suite Principale + Double Suites).
+  // Écouteur posé sur la fenêtre (le widget reconstruit son conteneur) et dès l'appui (le widget
+  // réagit au mousedown), pour passer avant le comportement par défaut de Beds24.
+  function pickDate(e) {
+    var a = e.target.closest && e.target.closest('#bk-widget-panel a[data-date], #bk-widget-section a[data-date]');
+    var td = a && a.closest('td[data-handler="selectDay"]');
+    if (!td || /unavailable/.test(td.className)) return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    if (e.type !== 'click' && e.type !== 'touchend') return;
+    var pad = function (n) { return String(n).padStart(2, '0'); };
+    var iso = td.dataset.year + '-' + pad(+td.dataset.month + 1) + '-' + pad(a.dataset.date);
+    var url = new URL('reservation.html', window.location.href);
+    url.searchParams.set('checkin', iso);
+    url.searchParams.set('numnight', '1');
+    window.location.href = url.href;
+  }
+  ['mousedown', 'mouseup', 'click', 'touchend'].forEach(function (t) { window.addEventListener(t, pickDate, true); });
   jQuery(function () {
     mount('bk-widget-panel', 1);
     mount('bk-widget-section', window.innerWidth >= 768 ? 2 : 1);
