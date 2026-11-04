@@ -76,6 +76,7 @@
   (function () {
     var params = new URLSearchParams(window.location.search);
     params.delete('roomid');           // on affiche les deux formules, pas seulement la Suite Principale
+    if (!params.has('numnight')) params.set('numnight', '1');  // 1 nuit par défaut
     params.set('propid', '365017');
     params.set('lang', 'fr');
     params.set('referer', 'iframe');

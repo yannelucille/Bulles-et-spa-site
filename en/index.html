@@ -665,6 +665,25 @@
   function mount(id, months) {
     if (!window.jQuery || !jQuery.fn.bookWidget || !document.getElementById(id)) return;
     jQuery('#' + id).bookWidget(jQuery.extend({}, BEDS24, { numMonth: months }));
+    // Le roomid ne sert qu'à colorer le calendrier (une réservation bloque tout le loft).
+    // Au clic sur une date, on va directement sur la page Réservation avec 1 nuit par défaut
+    // et sans filtre de chambre, pour afficher les deux formules (Suite Principale + Double Suites).
+    var form = document.querySelector('#' + id + ' form');
+    if (!form) return;
+    function go(e) {
+      if (e) e.preventDefault();
+      var v = (form.elements.checkin && form.elements.checkin.value) || '';
+      var m = v.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/) || v.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+      var iso = '';
+      if (m) iso = m[1].length === 4 ? m[1] + '-' + m[2] + '-' + m[3]
+                                     : (m[3].length === 2 ? '20' + m[3] : m[3]) + '-' + m[2] + '-' + m[1];
+      var url = new URL('reservation.html', window.location.href);
+      if (iso) url.searchParams.set('checkin', iso);
+      url.searchParams.set('numnight', '1');
+      window.location.href = url.href;
+    }
+    form.addEventListener('submit', go);
+    form.submit = go;
   }
   jQuery(function () {
     mount('bk-widget-panel', 1);
