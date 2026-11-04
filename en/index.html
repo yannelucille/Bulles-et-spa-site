@@ -671,6 +671,11 @@
   // et sans filtre de chambre, pour afficher les deux formules (Suite Principale + Double Suites).
   // Écouteur posé sur la fenêtre (le widget reconstruit son conteneur) et dès l'appui (le widget
   // réagit au mousedown), pour passer avant le comportement par défaut de Beds24.
+  // Dates où Beds24 impose un minimum de nuits (ligne « Min Stay » du calendrier Beds24).
+  // À tenir à jour quand une nouvelle période est ajoutée dans Beds24 (Saint-Valentin, ponts…).
+  var MIN_NIGHTS = {
+    '2026-12-24': 2, '2026-12-25': 2, '2026-12-26': 2, '2026-12-31': 2
+  };
   function pickDate(e) {
     var a = e.target.closest && e.target.closest('#bk-widget-panel a[data-date], #bk-widget-section a[data-date]');
     var td = a && a.closest('td[data-handler="selectDay"]');
@@ -682,7 +687,7 @@
     var iso = td.dataset.year + '-' + pad(+td.dataset.month + 1) + '-' + pad(a.dataset.date);
     var url = new URL('reservation.html', window.location.href);
     url.searchParams.set('checkin', iso);
-    url.searchParams.set('numnight', '1');
+    url.searchParams.set('numnight', String(MIN_NIGHTS[iso] || 1));
     window.location.href = url.href;
   }
   ['mousedown', 'mouseup', 'click', 'touchend'].forEach(function (t) { window.addEventListener(t, pickDate, true); });
